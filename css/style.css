@@ -1,0 +1,328 @@
+
+/* Global Settings */
+:root {
+    --img-title-width: 90%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+p {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+html {
+    scroll-padding-top: 10vh;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0), rgb(123, 123, 123), rgb(255, 219, 161));
+    color: white;
+}
+
+
+/* CSS For The Nav Bar */
+header {
+    height: 10vh;
+    width: 100vw;
+    background: linear-gradient(25deg, black, black, rgb(255, 222, 168)); 
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    color: white;
+    border-bottom: solid white 4px;
+    
+}
+
+.site-title {
+    width: 40%;
+    margin-left: 3%;
+    align-self: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.name{
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+
+
+.user-workfield {
+    font-family: 'Amatic SC', cursive;
+    font-size: large;
+}
+
+.profile-img {
+    object-fit: cover;
+    height: 8.5vh;
+    width: 15vw;
+
+}
+
+
+/* Nav Bar Links Style */
+ul {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+
+.nav-cards {
+    list-style: none;
+    text-align: center;
+    align-self: center;
+    
+}
+
+
+
+.nav-links:hover {
+    font-size: 23px;
+    color: red;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
+
+/* main section styling */
+
+main {
+    padding-left: 10%;
+    width: 80vw;
+    margin: auto;
+    
+}
+
+main > * {
+    padding: 2%;
+    margin: 2%;
+    border-left: solid rgb(255, 255, 255) 3px;
+    display: grid; 
+    margin-top: 4%; 
+}
+
+
+/* cards styling */
+
+.cards::before {
+    position: absolute;
+    left: 11vw;
+    text-align: center;
+    width: 9vw;
+    word-wrap: normal;
+}
+
+#about-me::before {
+    content: "ABOUT ME";
+
+}
+
+#work::before {
+    content: "WORK";
+}
+
+/* ID Work: Main Portfolio cards Style */
+#work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 20px;
+}
+
+/* first project larger than the rest */
+#main-work-card {
+    flex: 0 0 60%;
+    margin: 0 20%;
+}
+
+#main-work-card img {
+    height: 80%;
+    width: var(--img-title-width);
+
+}
+
+.work-cards {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 20%;
+    color: white;
+    text-decoration: none;
+
+}
+
+#main-work-card p {
+    width: var(--img-title-width);
+    padding-top: 5%;
+}
+
+.work-cards p {
+    text-decoration: underline;
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+
+.card-img {
+    height: 30vh;
+    width: 22vw;
+    border-radius: 20% 20% 0 0;
+    object-fit: cover;
+    border: solid white 5px;
+}
+
+#contact-me::before {
+    content: "CONTACT ME";
+}
+
+
+/* footer styling */
+
+footer {
+    text-align: center;
+    margin-left: 10vw;
+    height: 20vh;
+}
+
+footer p {
+    padding: 5vh;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+
+
+/* Screen size change */
+
+@media screen and (max-width: 850px){
+
+    /* global changes */
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /* Nav Bar Changes */
+    ul {
+        padding: 0;
+        width: 60%;
+    }
+    
+
+    /* ID Work: Main Portfolio cards Style Changes*/
+    main {
+        padding-left: 0;
+    }
+
+    main > * {
+        border: none;
+        border-bottom: black solid 3px;
+    }
+
+    .cards {
+        padding: 3% 3% 5% 3%;
+        margin: 0 auto;
+    }
+
+    .cards::before {
+        display: block;
+        position: initial;
+        width: 100%;
+        word-wrap: normal;
+        margin: 2% auto;
+        padding-bottom: 5%;
+    }
+
+    .work-cards {
+        margin: 0 auto;
+        flex-basis: 90%;
+    }
+
+    .work-cards img {
+        object-fit: cover;
+        height: 70vh;
+        width: 70vw;
+        border-radius: 47%;
+    }
+
+    
+
+    #main-work-card img {
+        object-fit: cover;
+        height: 70vh;
+        width: 70vw;
+        border-radius: 47%;
+    }
+
+    #main-work-card p {
+        width: 100%;
+    }
+
+    footer {
+        margin-left: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 620px){
+    .work-cards img, #main-work-card img {
+        object-fit: cover;
+        height: 60vh;
+        width: 70vw;
+        border-radius: 47%;
+    }
+
+    .user-name{
+        font-size: 12px;
+    }
+    .nav-links {
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+
+    .work-cards img, #main-work-card img {
+        object-fit: cover;
+        height: 40vh;
+        width: 70vw;
+        border-radius: 47%;
+    }
+
+    .nav-links {
+        font-size: 12px;
+    }
+}
