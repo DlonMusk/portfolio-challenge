@@ -12,4 +12,4 @@ In this challenge we had to build a portfolio website from scratch to showcase o
 
 ![Mock-up-image](./README_assets/website-smallform-screenshot.png)
 
- [**GITHUB PAGES LINK**](https://dlonmusk.github.io/refactor-challenge/Develop/index.html)
+ [**GITHUB PAGES LINK**](https://dlonmusk.github.io/portfolio-challenge/)
